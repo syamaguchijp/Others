@@ -12,6 +12,9 @@ int main(void) {
     // //////// 配列
 
     int intArray[] = {0, 1, 2, 3, 4};
+    intArray[4] = 999;
+
+    // 走査
 
     for (int i = 0; i < sizeof(intArray)/sizeof(intArray[0]); i++) {
         printf("%d\n", intArray[i]);
@@ -28,7 +31,27 @@ int main(void) {
         i++;
     }
 
-    printf("intArrayのポインタの先頭は、%p", intArray); // []を伴わない配列名は、配列の先頭要素のポインタと解釈される
+    printf("intArrayのポインタの先頭は、%p\n", intArray); // []を伴わない配列名は、配列の先頭要素のポインタと解釈される
+
+    // Deep Copy
+
+    int intArray2[5];
+    memcpy(intArray2, intArray, sizeof(int) * 5);
+    intArray[4] = 8888; // intArray2には影響しない
+    for (int i = 0; i < 5; i++) {
+        printf("intArray2 %d\n", intArray2[i]);
+    }
+    printf("intArray2のポインタの先頭は、%p\n", intArray2);
+ 
+    // Shallow Copy
+
+    int *intArray3;
+    intArray3 = intArray; // []を伴わない配列名は、配列の先頭要素のポインタ
+    intArray[0] = 777; // intArray3に影響する
+    for (int i = 0; i < 5; i++) {
+        printf("intArray3 %d\n", intArray3[i]);
+    }
+    printf("intArray3のポインタの先頭は、%p\n", intArray3);
 
     // 配列の動的な生成
 

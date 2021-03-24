@@ -6,13 +6,7 @@ using namespace std;
 
 int main(void) {
 
-    // C言語
-    // char型の配列で文字列を表現する。
-    char str[6]; // 末尾にはnull文字（文字コード0）が格納されるため、文字数プラス1の配列
-    strcpy(str, "Hello");   
-    cout << str << "\n";
-
-    // C++ stringクラスがある
+    // C++はstringクラスがある
     string str2 = "Honda";
     printf("%s \n", str2.c_str());
 

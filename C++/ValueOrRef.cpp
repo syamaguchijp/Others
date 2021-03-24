@@ -38,11 +38,6 @@ void function2(string str) {
     printf("function2 %s\n", str.c_str());
 }
 
-void function3(int array[]) {
-    array[2] = 777;
-    printf("function3 %d\n", array[2]);
-}
-
 void function4(map<string, int> map) {
     map["a"] = 888;
     printf("function4 %d\n", map["a"]);
@@ -70,6 +65,11 @@ void function12(string *str) {
     if (str == nullptr) { return;}
     *str += "zzz";
     printf("function12 %s\n", (*str).c_str());
+}
+
+void function13(int array[]) {
+    array[2] = 777;
+    printf("function13 %d\n", array[2]);
 }
 
 void function14(map<string, int> *map) {
@@ -156,8 +156,8 @@ int main() {
     printf("----------- array\n");
 
     int intArray[] = {0, 1, 2, 3, 4};
-    function3(intArray); // []を伴わない配列名は、配列の先頭要素のポインタと解釈される
-    printf("after function3 %d\n", intArray[2]);
+    function13(intArray); // []を伴わない配列名は、配列の先頭要素のポインタと解釈される
+    printf("after function13 %d\n", intArray[2]);
 
     // 辞書
 
