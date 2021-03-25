@@ -92,10 +92,28 @@ for (let value of set) {
 }
 
 
-///////// 辞書 /////////
+///////// 連想配列 /////////
 
+var dict = {}; // 空
+dict = {name: "Honda", nickname: "Hon", age: 21, isMale: true} // 初期化
 
+// 要素の追加
+dict.country = "Japan" // チェーンで追加する方法
+dict['town'] = "Tokyo" // 添字で追加する方法
 
+// 要素の削除
+delete dict['nickname']
 
+// 走査
+for (var key in dict) {
+    console.log(`${key}: ${dict[key]}`)
+}
+var keys = Object.keys(dict);
+for (var i=0; i < keys.length; i++) {
+    console.log(`${keys[i]}: ${dict[keys[i]]}`)
+}
+Object.keys(dict).forEach(function(value) {
+    console.log( value + ': ' + this[value] )
+}, dict)
 
 
