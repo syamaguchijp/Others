@@ -1,0 +1,11 @@
+C:\Users\admin\Documents\VB\Sample\Sample\obj\Debug\Sample.Resources.resources
+C:\Users\admin\Documents\VB\Sample\Sample\obj\Debug\Sample.vbproj.GenerateResource.cache
+C:\Users\admin\Documents\VB\Sample\Sample\obj\Debug\Sample.vbproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\VB\Sample\Sample\bin\Debug\Sample.exe.config
+C:\Users\admin\Documents\VB\Sample\Sample\bin\Debug\Sample.exe
+C:\Users\admin\Documents\VB\Sample\Sample\bin\Debug\Sample.pdb
+C:\Users\admin\Documents\VB\Sample\Sample\bin\Debug\Sample.xml
+C:\Users\admin\Documents\VB\Sample\Sample\obj\Debug\Sample.exe
+C:\Users\admin\Documents\VB\Sample\Sample\obj\Debug\Sample.xml
+C:\Users\admin\Documents\VB\Sample\Sample\obj\Debug\Sample.pdb
+C:\Users\admin\Documents\VB\Sample\Sample\obj\Debug\Sample.vbprojAssemblyReference.cache
