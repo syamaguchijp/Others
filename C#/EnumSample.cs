@@ -7,7 +7,6 @@ class EnumSample {
         Console.WriteLine(white);
         Console.WriteLine((int)white);
         Console.WriteLine(white.ToString());
-
     }
 
     enum ColorEnum
