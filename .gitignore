@@ -33,3 +33,5 @@
 
 *.DS_Store
 
+./C#/obj/Debug/
+./C#/bin/Debug/
