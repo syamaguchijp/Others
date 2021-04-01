@@ -30,6 +30,8 @@ class ArraySample {
         Console.WriteLine("---");
 
         // コピー
+
+        // Shallow
         int[] ary2 = ary;
         ary[0] = 99;
         foreach (int i in ary2) {
@@ -37,11 +39,12 @@ class ArraySample {
         }
         Console.WriteLine("---");
 
+        // Deep
         int[] ary3 = new int[ary.Length];
         Array.Copy(ary, ary3, ary.Length);
-        ary[0] = 99;
+        ary[0] = 9999;
         foreach (int i in ary3) {
-            Console.WriteLine(i);
+            Console.WriteLine(i); // aryの変更がary3に影響しない
         }
         Console.WriteLine("---");
 
