@@ -6,6 +6,7 @@
  * Python
  * PHP
  * Perl
+ * Ruby
  * JavaScript
  * Visual Basic
 
