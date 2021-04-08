@@ -66,9 +66,81 @@ ary.each{|var|
     printf("each %d\n", var)
 }
 
+# 存在確認
+if ary.include?(2)
+    print "存在します\n"
+end
+
+
 # /////////// ハッシュ ///////////
 
+# 生成
+hash = {"Honda" => 1, "Yamaha" => 2, "Kawasaki" => 3}
+p hash
+p hash["Yamaha"]
+
+# 要素の変更
+hash["Honda"] = 99
+p hash
+
+# 要素の追加
+hash["Suzuki"] = 4
+p hash
+
+# 要素の削除
+hash.delete("Suzuki")
+p hash
+
+# 走査
+hash.each{
+    |key, val| # ブロック変数
+    p "#{key} : #{val}"
+}
+
+# 検索
+p hash.find {|k,v| k == "Yamaha"}
+
+# 要素数
+p hash.length
+
+# ソート
+# キーを昇順
+hash = hash.sort
+p hash
+# キーを降順
+hash = hash.sort.reverse
+p hash
+# 値を昇順
+hash = hash.sort_by{ | k, v | v }
+p hash
+# 値を降順
+hash = hash.sort_by{ | k, v | v }.reverse
+p hash
 
 
+# /////////// セット ///////////
 
+require 'set'
+
+# 生成
+mySet = Set.new(['Honda', 'Yamaha', 'Honda', 'kawasaki'])
+p mySet
+
+# 追加
+mySet.add('Suzuki')
+p mySet
+
+# 削除
+mySet.delete('Suzuki')
+p mySet
+
+# 走査
+mySet.each do |val|
+    p val
+end
+
+# 存在確認
+if mySet.include?("Yamaha")
+    print "存在します\n"
+end
 
